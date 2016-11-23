@@ -6,7 +6,7 @@ public class ReinitializeDB {
 	
 	public static void reinitialize(Connection connection) throws SQLException{
 		
-		String dropTableSql = "DROP TABLE users";
+		String dropTableSql = "DROP SCHEMA PUBLIC CASCADE";
 		Statement dropTable = connection.createStatement();
 		dropTable.execute(dropTableSql);
 		
